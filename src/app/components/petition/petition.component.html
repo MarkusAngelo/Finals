@@ -1,0 +1,155 @@
+<html>
+  <body>
+    <!-- ======= Hero Section (Navbar inside) ======= -->
+    <section>
+      <div class="petition-list" id="petition-list">
+        <div id="herocontent">
+          <!-- ======= Header/ Navbar ======= -->
+          <header>
+            <div class="wrapper">
+              <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container border p-2 my-5" id="header-container">
+                  <a routerLink=""
+                    ><img
+                      src="../../../assets/logo.png"
+                      class="px-3"
+                      height="50"
+                      alt="Change The Future Logo"
+                  /></a>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#main_nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <i class="bi bi-list"></i>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="main_nav">
+                    <ul
+                      class="container navbar-nav mr-auto justify-content-end"
+                    >
+                      <li class="nav-item mx-3">
+                        <a
+                          class="nav-link"
+                          id="nav1"
+                          routerLink="/petitions-list"
+                          >Petition List</a
+                        >
+                      </li>
+                      <li class="nav-item mx-3">
+                        <a class="nav-link" id="nav1" routerLink="/members-list"
+                          >Membership List</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a routerLink="/admin-dashboard" class="nav-link"
+                          ><button
+                            type="button"
+                            class="btn"
+                            id="contact-button"
+                          >
+                            Home
+                          </button></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Petition Form ======= -->
+    <section class="petition" id="petition">
+      <br /><br />
+      <div
+        class="container-fluid"
+        style="background-color: rgba(240, 234, 210, 0.8)"
+        id="peition-sierra"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-6 my-2">
+              <div>
+                <h2 class="sierramadre">
+                  <span style="color: #6c584c">Save and Protect</span><br />
+                  <span style="color: #6d9424"> Sierra Madre</span>
+                </h2>
+                <p class="my-3">
+                  Sierra Madre also known as the “backbone of Luzon,” is the
+                  longest mountain range in the Philippines.
+                </p>
+                <p>
+                  It covers the northeast coast of Luzon island, serving as
+                  natural shield against typhoons. This also it supports major
+                  infrastructure, including irrigation dams, water utility and
+                  power plants, that are serving urban settlements, including
+                  Metro Manila.
+                </p>
+              </div>
+            </div>
+            <div class="col">2 of 2</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-end px-5">
+          <div class="col-6">
+            <div
+              class="card-body text-center justify-content-center"
+              id="petition-card"
+            >
+              <form
+                [formGroup]="updateForm"
+                class="px-3"
+                (ngSubmit)="onUpdate()"
+              >
+                <h2 class="signthepetition py-3">Sign the Petition Now!</h2>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control my-4"
+                    placeholder="First Name"
+                    formControlName="fname"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control my-4"
+                    placeholder="Last Name"
+                    formControlName="lname"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control my-4"
+                    placeholder="E-mail"
+                    formControlName="email"
+                    required
+                  />
+                </div>
+                <div>
+                  <button type="submit" class="btn" id="petition-button">
+                    Update Petition
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br /><br />
+    </section>
+  </body>
+</html>

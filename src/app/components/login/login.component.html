@@ -1,0 +1,56 @@
+<html>
+  <body>
+    <div class="container">
+      <a routerLink="/home" routerLinkActive="active" class="exit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          fill="currentColor"
+          class="bi bi-house-door-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
+          />
+        </svg>
+      </a>
+      <h2 class="login-title">Log in</h2>
+
+      <form
+        [formGroup]="loginForm"
+        name="ctf-login"
+        class="login-form"
+        (ngSubmit)="login()"
+      >
+        <div>
+          <label for="username">Username </label>
+          <input
+            id="username"
+            type="text"
+            class="form-control"
+            formControlName="username"
+            placeholder="Username"
+            name="username"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="password">Password </label>
+          <input
+            id="password"
+            type="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+        </div>
+
+        <button class="btn btn--form" type="submit">Log In</button>
+      </form>
+    </div>
+  </body>
+</html>

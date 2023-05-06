@@ -1,0 +1,122 @@
+<html>
+  <body>
+    <!-- ======= Hero Section (Navbar inside) ======= -->
+    <section>
+      <div class="admin-homepage" id="admin-homepage">
+        <div id="herocontent">
+          <!-- ======= Header/ Navbar ======= -->
+          <header>
+            <div class="wrapper">
+              <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container border p-2 my-5" id="header-container">
+                  <a routerLinkActive="active" routerLink=""
+                    ><img
+                      src="../../../assets/logo.png"
+                      class="px-3"
+                      height="50"
+                      alt="Change The Future Logo"
+                  /></a>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#main_nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <i class="bi bi-list"></i>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="main_nav">
+                    <ul
+                      class="container navbar-nav mr-auto justify-content-end"
+                    >
+                      <li class="nav-item mx-3">
+                        <a
+                          class="nav-link"
+                          id="nav1"
+                          routerLink="/petitions-list"
+                          routerLinkActive="active"
+                          >Petition List</a
+                        >
+                      </li>
+                      <li class="nav-item mx-3">
+                        <a
+                          class="nav-link"
+                          id="nav1"
+                          routerLink="/members-list"
+                          routerLinkActive="active"
+                          >Membership List</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a
+                          routerLink="/admin-dashboard"
+                          routerLinkActive="active"
+                          class="nav-link"
+                          ><button
+                            type="button"
+                            class="btn"
+                            id="contact-button"
+                          >
+                            Home
+                          </button></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
+
+          <!-----------CONTENT----------->
+          <section class="admin-content" id="admin-content">
+            <div class="container">
+              <div class="row justify-content-center text-center">
+                <div class="col-6">
+                  <div class="content">
+                    <a routerLinkActive="active" routerLink="/petitions-list">
+                      <div class="content-overlay"></div>
+                      <img
+                        class="content-image"
+                        src="../../../assets/petition-bg.png"
+                        alt=""
+                      />
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Petition List</h3>
+                        <p class="content-text">List of signed petitioners</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="content">
+                    <a routerLinkActive="active" routerLink="/members-list">
+                      <div class="content-overlay"></div>
+                      <img
+                        class="content-image"
+                        src="../../../assets/membership-bg.png"
+                        alt=""
+                      />
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Membership</h3>
+                        <p class="content-text">List of members</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run(".tz-gallery");
+    </script>
+  </body>
+</html>

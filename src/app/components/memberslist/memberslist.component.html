@@ -1,0 +1,139 @@
+<html>
+  <body>
+    <!-- ======= Hero Section (Navbar inside) ======= -->
+    <section>
+      <div class="membership-list" id="membership-list">
+        <div id="herocontent">
+          <!-- ======= Header/ Navbar ======= -->
+          <header>
+            <div class="wrapper">
+              <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container border p-2 my-5" id="header-container">
+                  <a routerLink="" routerLinkActive="active"
+                    ><img
+                      src="../../../assets/logo.png"
+                      class="px-3"
+                      height="50"
+                      alt="Change The Future Logo"
+                  /></a>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#main_nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <i class="bi bi-list"></i>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="main_nav">
+                    <ul
+                      class="container navbar-nav mr-auto justify-content-end"
+                    >
+                      <li class="nav-item mx-3">
+                        <a
+                          class="nav-link"
+                          id="nav1"
+                          routerLink="/petitions-list"
+                          routerLinkActive="active"
+                          >Petition List</a
+                        >
+                      </li>
+                      <li class="nav-item mx-3">
+                        <a
+                          class="nav-link"
+                          id="nav1"
+                          routerLink="/members-list"
+                          routerLinkActive="active"
+                          >Membership List</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a
+                          routerLink="/home"
+                          routerLinkActive="active"
+                          class="nav-link"
+                          ><button
+                            type="button"
+                            class="btn"
+                            id="contact-button"
+                          >
+                            Log-out
+                          </button></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
+          <!-----------TABLE----------->
+          <div>
+            <div class="justify-content-center text-center">
+              <table
+                class="table table-borderless table-striped table-condensed table-hover"
+                id="table-design"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <!--ID-->
+                    <th scope="col">NAME</th>
+                    <!--NAME-->
+                    <th scope="col">EMAIL</th>
+                    <!--E-MAIL-->
+                    <th scope="col">CONTACT NUMBER</th>
+                    <!--NUMVER-->
+                    <th scope="col">COUNTRY CODE</th>
+                    <!--ADDRESS-->
+                    <th scope="col">DATE JOINED</th>
+                    <!--DATE-->
+                    <th scope="col">ACTION</th>
+                    <!--ACTION-->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let mem of Members; let i = index">
+                    <th style="word-break: break-all; width: 10%" scope="row">
+                      {{ mem._id }}
+                    </th>
+                    <td>{{ mem.name }}</td>
+                    <td>{{ mem.email2 }}</td>
+                    <td>{{ mem.contact }}</td>
+                    <td>{{ mem.country }}</td>
+                    <td>{{ mem.date | date : "mediumDate" }}</td>
+
+                    <td class="action">
+                      <!--<button class="btn" id="contact-button"routerLink="/update-petition">Update</button>-->
+                      <button
+                        class="btn"
+                        id="update-button"
+                        routerLink="/update-member/{{ mem._id }}"
+                      >
+                        Update
+                      </button>
+                      <button
+                        class="btn m-2"
+                        id="delete-button"
+                        (click)="delete(mem._id, i)"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run(".tz-gallery");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+  color: #121212;
+  background-image: url("../../../assets/petition-bg.png");
+  background-attachment: fixed;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+  object-fit: cover;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+}
+#header-container {
+  border-radius: 10px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+header .nav-link {
+  font-weight: 500;
+  color: #000000;
+}
+header .nav-link:hover {
+  color: #6d9424;
+  font-weight: 700px;
+}
+header .nav-link:active {
+  color: #6d9424;
+  font-weight: 700px;
+}
+.dropdown-menu:li {
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+#nav1 {
+  margin-top: 5px;
+}
+#contact-button {
+  background-color: #c6dc8b;
+  border-radius: 5px;
+  width: 120px;
+  text-decoration: none;
+}
+
+#contact-button:hover {
+  color: white;
+  background-color: #6d9424;
+  opacity: 100%;
+  text-decoration: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#update-button {
+  background-color: #c6dc8b;
+  border-radius: 5px;
+  width: fit-content;
+  text-decoration: none;
+}
+
+#update-button:hover {
+  color: white;
+  background-color: #6d9424;
+  opacity: 100%;
+  text-decoration: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#delete-button {
+  background-color: #d4a682;
+  border-radius: 5px;
+  width: fit-content;
+  text-decoration: none;
+}
+
+#delete-button:hover {
+  color: white;
+  background-color: #a87147;
+  opacity: 100%;
+  text-decoration: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+/*--------------------------------------------------------------
+# TABLE
+--------------------------------------------------------------*/
+table {
+  background: rgb(198, 220, 139);
+  background: linear-gradient(
+    180deg,
+    rgba(198, 220, 139, 0.6) 49%,
+    rgba(169, 132, 103, 1) 100%
+  );
+  border-radius: 10px;
+  border: none;
+  margin: 2% auto;
+  width: 60%;
+}
+table td {
+  font-family: "Roboto", sans-serif;
+}
+th,
+td {
+  border: none;
+}
+.action button {
+  margin: 0 2%;
+}
